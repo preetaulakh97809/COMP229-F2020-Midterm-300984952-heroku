@@ -1,0 +1,66 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+
+<section>
+    <div class="container">
+        <form  action="/book-list/edit" method="POST">
+            <div class="control-group">
+                <div class="form-group">
+                    <input class="form-control" id="id" name="id" value="<%= BookList.id %>" type="hidden" />
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="name">Book Name</label>
+                    <input class="form-control" id="name" name="name" type="text" value="<%= BookList.name %>" placeholder="Book Name" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input class="form-control" id="author" name="author" type="text" value="<%= BookList.author %>" placeholder="Book Author" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="published">Published</label>
+                    <input class="form-control" id="published" name="published" type="text" value="<%= BookList.published %>" placeholder="Published" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input class="form-control" id="description" name="description" value="<%= BookList.description %>" type="text"
+                        placeholder="Book Description" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input class="form-control" id="price" name="price" type="text" value="<%= BookList.price %>" placeholder="Price" />
+                    <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" btn-xl btn-block>
+                    Update Book
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
